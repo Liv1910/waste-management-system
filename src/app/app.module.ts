@@ -6,22 +6,28 @@ import { MatInputModule } from '@angular/material/input';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
+import { AdminDashboardComponent } from './components/admin-dashboard/admin-dashboard.component';
+import { PickupHistoryComponent } from './components/pickup-history/pickup-history.component';
+import { ManageNotificationsComponent } from './components/notifications/notifications.component';
+import {MatBadgeModule} from '@angular/material/badge';
 
 @NgModule({
   declarations: [
-    // Your components
+    PickupHistoryComponent,
+    ManageNotificationsComponent,
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     ReactiveFormsModule,
     FormsModule,
-    HttpClientModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    MatFormFieldModule,
     MatInputModule,
-    ReactiveFormsModule
+    MatFormFieldModule,
+    AppRoutingModule,
+    HttpClientModule,
+    AdminDashboardComponent,
+    MatBadgeModule
   ],
-  providers: [],
+  providers: []
 })
 export class AppModule { }
